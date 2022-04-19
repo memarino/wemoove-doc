@@ -1,0 +1,94 @@
+Consideraciones: para las medidas nos manejamos en sistema metrico, Km y en kilos, despues se transforman desde la app
+
+APIS
+USUARIO
+ApiGetUsuario (id: number)
+{  id: number;
+  nombre: string;
+  apellido: string;
+  email: string;
+  tipoDoc: string;
+  nroDoc: string;
+  foto: string;
+  totalLogros: string;
+  totalDesafios: string;
+  totalActividades: string;
+  totalDistancia: string;
+  totalUsd: string;
+  plataforma: string;
+  fechaUltimoUso: Date;
+  versionInstalada: string;
+  genero: string;
+  peso: number;(kg)
+  estatura: number;(cms)
+  entidadBeneficaId: number;
+  totalCalorias: number;
+  totalTiempo: number;
+  cotizacion: number;
+}
+
+ApiSaveUsuario (  id: number;
+  nombre: string;
+  apellido: string;
+  foto: string;
+  plataforma: string;
+  fechaUltimoUso: Date;
+  versionInstalada: string;
+  genero: string;
+  peso: number;
+  estatura: number) return ok / error
+
+ACTIVIDADES
+ApiGetActividad(idUsuario: number) 
+{id: number;
+    fechaHoraInicio Date;
+    fechaHoraFin: Time;
+    totalKilometros: number;
+    totalCalorias: number;
+    totalUsd: number;
+}
+
+ApiSaveActividad(idActividad: number, fechaHoraInicio: Date; fechaHoraFin: Date;) return ok / error
+
+ApiGetAllMyActivities(idUsuario: number, idActividad: number, fechaActividad: date, idDesafio: number)
+{[
+	idActividad: number;
+    inProgress: boolean;
+    fechaHoraInicio: Date;
+    fechaHoraFin: Date;
+]
+} ;
+
+ApiGetAllActivities()
+{
+[ nombre: string;
+    iconoUrl: string;
+    consideraMapa: boolean;]
+} 
+
+DESAFIOS
+ApiGetDesafioDetalle (idUsuario: number, idDesafio: number){
+actividadId: number,
+nombre: string,
+descripcion: string,
+distancia: number,
+calorias: number,
+tiempoTotal: number,
+frecuencia: ??
+tiempoMaximo: number,
+porcDescensoImc: number,
+peridiocidad: ??
+premio: string
+icono: url_Imagen	
+};
+
+ApiSaveDesafio (idDesafio, idActividad);
+
+LOGROS
+ApiGetLogros(idUsuario: number)
+{ 	idLogro: number,
+	nombre: string,
+	descripcion: string,
+	activo: bool,
+	condicion: ??
+}
