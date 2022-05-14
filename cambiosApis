@@ -1,0 +1,46 @@
+Apis que faltan
+
+Users/getTotalAmounts: (por parámetro que reciba “periodo” (anual, mensual, semanal, diario, total) 
+Anual: año en curso, mensual: mes en curso, semanal: semana en curso, diario: dia de hoy, total: todo desde que hizo su primer carrera)
+- Total_earning (el total de dinero ganado USD)
+- wemoo_value (Cotización de la moneda del dia para calcular el valor de WEMOO que tengo)
+- daily_cal_avg (el promedio de calories quemadas desde el inicio de la actividad)
+- total_challenges
+- total_awards (creo que son los logros, yo les puse achievements)
+- Total-activities
+- Total-calories
+
+Users/getTodayActivities
+    -  activity_type_id, 
+    - today_calories 
+ (seria un listado con todas las actividades que hizo el usuario y el monto de calorías - si el usr no gasto ninguna caloría, trae las actividades que hizo con valor 0)
+
+Users/updateProfile:
+- firstname: string='';
+  -  lastname: string='';
+  -  email: string='';
+  -  selfie: string;
+
+Apis para modificar:
+api/V1/users/update:
+1	sex *required				
+2	height *required				
+3	weight *required				
+4	entity_id				numeric
+5	measure_unit *required				
+6	country *required				
+7	lenguage *required				
+8	Birth_date				
+
+Api/v1/users/me
+* Datos que recibe:
+confirmation_code: "5033" created_at: "2022-05-11T17:24:03.000000Z" doc_number: "30971590" doc_type: "D.N.I." email: "magarcia@intermedia.com.uy" email_verified_at: "2022-05-11T17:25:39.000000Z" firstname: "malka" id: 23 lastname: "malka" permissions: [] pic_doc_back: null pic_doc_front: null roles: [{id: 2, name: "appUser", guard_name: "web", created_at: "2022-05-10T22:16:13.000000Z",…}] selfie: null two_factor_recovery_codes: null two_factor_secret: null updated_at: "2022-05-11T17:25:39.000000Z"
+* FALTAN:
+ sex: string;
+  weight: number;
+  height: number;
+  entity_id: number;
+measure_unit
+lenguage
+Birth_date
+
